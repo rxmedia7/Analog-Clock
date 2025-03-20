@@ -1,21 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body{
+
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     background-color: #091a21;
-
 }
-.container{
+
+.container {
     width: 500px;
     height: 500px;
-    background-color:#091a21;
+    background-color: #091a21;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
     border-radius: 50%;
@@ -27,7 +28,8 @@ body{
     box-shadow: 0px 0px 70px black,
     inset 0px 0px 15px rgb(47, 47, 49);
 }
-.number{
+
+.number {
     transform: rotate(calc(30deg * var(--n)));
     position: absolute;
     text-align: center;
@@ -35,7 +37,8 @@ body{
     font-size: 20px;
     background-color: transparent;
 }
-.capital{
+
+.capital {
     transform: rotate(calc(30deg * var(--n)));
     position: absolute;
     text-align: center;
@@ -43,24 +46,27 @@ body{
     font-size: 40px;
     background-color: transparent;
     text-decoration: none;
-
 }
-.number b{
+
+.number b {
     display: inline-block;
     transform: rotate(calc(0deg * var(--n)));
 }
-.capital b{
+
+.capital b {
     display: inline-block;
     transform: rotate(calc(-30deg * var(--n)));
 }
-.center-dot{
+
+.center-dot {
     position: absolute;
     width: 25px;
     height: 25px;
     border-radius: 50%;
     background-color: white;
 }
-.hour-hand{
+
+.hour-hand {
     position: absolute;
     width: 12px;
     height: 110px;
@@ -76,7 +82,8 @@ body{
     transform-origin: bottom;
     animation-timing-function: linear;
 }
-.minute-hand{
+
+.minute-hand {
     position: absolute;
     width: 13px;
     height: 130px;
@@ -85,14 +92,15 @@ body{
     bottom: 50%;
     background-color: white;
     transform: translate(30deg);
-    
+
     animation-name: clock;
     animation-duration: 3600s;
     animation-iteration-count: infinite;
     transform-origin: bottom;
     animation-timing-function: linear;
 }
-.second-hand{
+
+.second-hand {
     position: absolute;
     width: 5px;
     height: 150px;
@@ -107,11 +115,13 @@ body{
     transform-origin: bottom;
     animation-timing-function: linear;
 }
-@keyframes clock{
-    from{
+
+@keyframes clock {
+    from {
         transform: (0deg);
     }
-    to{
-       transform: rotate(360deg);
+
+    to {
+        transform: rotate(360deg);
     }
 }
